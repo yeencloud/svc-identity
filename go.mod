@@ -10,7 +10,7 @@ require (
 	github.com/sirupsen/logrus v1.9.3
 	github.com/yeencloud/lib-base v0.3.0
 	github.com/yeencloud/lib-httpserver v0.2.4
-	gorm.io/gorm v1.25.12
+	gorm.io/gorm v1.26.0
 )
 
 require (
