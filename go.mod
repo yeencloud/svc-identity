@@ -1,15 +1,13 @@
 module github.com/yeencloud/bpt-service
 
-go 1.23.0
-
-toolchain go1.23.4
+go 1.24
 
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/google/uuid v1.6.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/yeencloud/lib-base v0.3.0
-	github.com/yeencloud/lib-httpserver v0.2.4
+	github.com/yeencloud/lib-httpserver v0.2.6
 	gorm.io/gorm v1.25.12
 )
 
@@ -57,10 +55,12 @@ require (
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.62.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
+	github.com/samber/lo v1.51.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	github.com/yeencloud/lib-database v0.2.4 // indirect
 	github.com/yeencloud/lib-events v0.1.5 // indirect
+	github.com/yeencloud/lib-httpserver/contract v1.0.0 // indirect
 	github.com/yeencloud/lib-metrics v0.2.5 // indirect
 	github.com/yeencloud/lib-shared v0.2.9 // indirect
 	golang.org/x/arch v0.16.0 // indirect
