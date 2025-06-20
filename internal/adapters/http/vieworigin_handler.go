@@ -3,7 +3,7 @@ package http
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/yeencloud/bpt-service/internal/domain"
+	"github.com/yeencloud/svc-identity/internal/domain"
 )
 
 func (s *HTTPServer) viewOriginHandler(c *gin.Context) (any, error) {

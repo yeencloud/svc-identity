@@ -1,11 +1,17 @@
 CI_RAW_URL = https://raw.githubusercontent.com/yeencloud/dpl-ci/refs/heads/main
 
 update:
+	mkdir -p .github/scripts
 	curl -O $(CI_RAW_URL)/makefile \
-         -O $(CI_RAW_URL)/.golangci.yml
-
+         -O $(CI_RAW_URL)/.golangci.yml \
+		 -O $(CI_RAW_URL)/.github/scripts/openapi-generate.sh \
+		 -O $(CI_RAW_URL)/.github/config/oapi-codegen.yml
 lint:
 	golangci-lint run ./...
 
 test:
-	go test -v ./...
+	go test -race -v ./...
+
+openapi:
+	go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
+	./.github/scripts/openapi-generate.sh

@@ -5,7 +5,7 @@ import (
 )
 
 func (s *HTTPServer) registerRoutes(engine *gin.Engine) {
-	r := engine.Use(s.server.RequireCorrelationID, s.server.RequireRequestID)
+	r := engine.Group("/identity", s.server.RequireCorrelationID, s.server.RequireRequestID)
 
-	r.GET("/", s.wrapped(s.viewOriginHandler))
+	r.POST("/user", s.wrapped(s.createUserHandler))
 }

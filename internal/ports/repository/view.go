@@ -3,7 +3,7 @@ package database
 import (
 	"context"
 
-	"github.com/yeencloud/bpt-service/internal/domain"
+	"github.com/yeencloud/svc-identity/internal/domain"
 )
 
 type ViewOriginRepository interface {

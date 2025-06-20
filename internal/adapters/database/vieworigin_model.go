@@ -6,8 +6,8 @@ import (
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 
-	"github.com/yeencloud/bpt-service/internal/domain"
 	service "github.com/yeencloud/lib-base"
+	"github.com/yeencloud/svc-identity/internal/domain"
 )
 
 type ViewOriginRepo struct{}

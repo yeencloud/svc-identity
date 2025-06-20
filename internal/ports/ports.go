@@ -1,8 +1,8 @@
 package ports
 
 import (
-	"github.com/yeencloud/bpt-service/internal/ports/repository"
 	"github.com/yeencloud/lib-base/events"
+	"github.com/yeencloud/svc-identity/internal/ports/repository"
 )
 
 type Ports struct {

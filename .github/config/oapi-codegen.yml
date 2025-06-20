@@ -1,0 +1,4 @@
+output-options:
+  skip-prune: true
+import-mapping:
+  "https://raw.githubusercontent.com/yeencloud/lib-httpserver/refs/heads/main/contract/httpserver.yaml": "github.com/yeencloud/lib-httpserver/contract/httpserver.yaml"

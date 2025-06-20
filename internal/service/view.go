@@ -4,7 +4,7 @@ import (
 	"context"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/yeencloud/bpt-service/internal/domain"
+	"github.com/yeencloud/svc-identity/internal/domain"
 )
 
 type ViewedEvent struct {

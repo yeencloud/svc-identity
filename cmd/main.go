@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 
-	"github.com/yeencloud/bpt-service/internal/adapters/database"
-	"github.com/yeencloud/bpt-service/internal/adapters/http"
-	"github.com/yeencloud/bpt-service/internal/service"
 	baseservice "github.com/yeencloud/lib-base"
+	"github.com/yeencloud/svc-identity/internal/adapters/database"
+	"github.com/yeencloud/svc-identity/internal/adapters/http"
+	"github.com/yeencloud/svc-identity/internal/service"
 )
 
 func main() {

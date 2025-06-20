@@ -3,10 +3,10 @@ package http
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/yeencloud/bpt-service/internal/ports"
 	service "github.com/yeencloud/lib-base"
 	"github.com/yeencloud/lib-base/transaction"
 	httpserver "github.com/yeencloud/lib-httpserver"
+	"github.com/yeencloud/svc-identity/internal/ports"
 )
 
 type HTTPServer struct {
