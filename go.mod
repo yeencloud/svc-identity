@@ -6,7 +6,7 @@ require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/google/uuid v1.6.0
 	github.com/sirupsen/logrus v1.9.3
-	github.com/yeencloud/lib-base v0.2.15
+	github.com/yeencloud/lib-base v0.2.16
 	github.com/yeencloud/lib-httpserver v0.2.7
 	google.golang.org/grpc v1.75.0
 	google.golang.org/protobuf v1.36.6
@@ -60,7 +60,7 @@ require (
 	github.com/samber/lo v1.51.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.12 // indirect
-	github.com/yeencloud/lib-database v0.2.5 // indirect
+	github.com/yeencloud/lib-database v0.2.6 // indirect
 	github.com/yeencloud/lib-events v0.1.7 // indirect
 	github.com/yeencloud/lib-httpserver/contract v1.0.0 // indirect
 	github.com/yeencloud/lib-metrics v0.2.7 // indirect
