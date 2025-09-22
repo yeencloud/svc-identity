@@ -149,8 +149,8 @@ github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS
 github.com/twitchyliquid64/golang-asm v0.15.1/go.mod h1:a1lVb/DtPvCB8fslRZhAngC2+aY1QWCk3Cedj/Gdt08=
 github.com/ugorji/go/codec v1.2.12 h1:9LC83zGrHhuUA9l16C9AHXAqEV/2wBQ4nkvumAE65EE=
 github.com/ugorji/go/codec v1.2.12/go.mod h1:UNopzCgEMSXjBc6AOMqYvWC1ktqTAfzJZUZgYf6w6lg=
-github.com/yeencloud/lib-base v0.2.16 h1:GfnWNzwPQoxSVkmQm6rLDMAed8U48+zJoC98y0BOkaY=
-github.com/yeencloud/lib-base v0.2.16/go.mod h1:5S6Y9zN3pZQn0o2D3rc5iEbovtOwW8GpZkTIb7JkJ7Q=
+github.com/yeencloud/lib-base v0.3.0 h1:T8PLx/ldKvsX2hyPIqyDoj02oxIZ7LZGoxPD1zv89ak=
+github.com/yeencloud/lib-base v0.3.0/go.mod h1:1/C4p+DlGiRadZVjjLNL0/47W5V2J1K0InqZhKu6ilg=
 github.com/yeencloud/lib-database v0.2.6 h1:kPPWHr8qDpry+yi+9HeNjwYgbsnhaV7/2FpeXY0fV6c=
 github.com/yeencloud/lib-database v0.2.6/go.mod h1:sJgwSM4yWRWizF+/Zjrft1fWLBrjB6XzySw0UHKdioc=
 github.com/yeencloud/lib-events v0.1.7 h1:fq/2EcUuymr2dUa8DwmKjXRfd/zenTYjouwfHuPNM6w=
