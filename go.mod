@@ -9,7 +9,7 @@ require (
 	github.com/yeencloud/lib-base v0.2.16
 	github.com/yeencloud/lib-httpserver v0.2.7
 	google.golang.org/grpc v1.75.0
-	google.golang.org/protobuf v1.36.6
+	google.golang.org/protobuf v1.36.10
 	gorm.io/gorm v1.25.12
 )
 
