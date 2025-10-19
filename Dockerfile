@@ -15,8 +15,8 @@ RUN go mod download
 COPY . .
 
 # Set build-time arguments (default values can be overridden)
-ARG TARGETOS=linux
-ARG TARGETARCH=amd64
+ARG TARGETOS
+ARG TARGETARCH 
 
 # Build the Go application with CGO disabled for portability
 RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o svc cmd/main.go
