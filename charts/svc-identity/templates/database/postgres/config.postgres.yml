@@ -1,4 +1,4 @@
-{{ if .Values.database.provider == "postgres" }}
+{{ if eq .Values.database.provider "postgres" }}
 apiVersion: v1
 kind: ConfigMap
 metadata:

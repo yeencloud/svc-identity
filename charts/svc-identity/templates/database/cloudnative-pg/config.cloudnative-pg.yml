@@ -1,13 +1,13 @@
-{{ if .Values.database.provider == "cloudnative-pg" }}
+{{ if eq .Values.database.provider "cloudnative-pg" }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}-cloudnative-pg
 data:
-  CLOUDNATIVE_PG_ADDRESS: {{ .Values.database.cloudnative-pg.address | quote }}
-  CLOUDNATIVE_PG_PORT: {{ .Values.database.cloudnative-pg.port | quote }}
-  CLOUDNATIVE_PG_USERNAME: {{ .Values.database.cloudnative-pg.username | quote }}
-  CLOUDNATIVE_PG_PASSWORD: {{ .Values.database.cloudnative-pg.password | quote }}
-  CLOUDNATIVE_PG_DATABASE: {{ .Values.database.cloudnative-pg.database | quote }}
-  CLOUDNATIVE_PG_TLS: {{ .Values.database.cloudnative-pg.tls | quote }}
+  CLOUDNATIVE_PG_ADDRESS: {{ .Values.database.address | quote }}
+  CLOUDNATIVE_PG_PORT: {{ .Values.database.port | quote }}
+  CLOUDNATIVE_PG_USERNAME: {{ .Values.database.username | quote }}
+  CLOUDNATIVE_PG_PASSWORD: {{ .Values.database.password | quote }}
+  CLOUDNATIVE_PG_DATABASE: {{ .Values.database.database | quote }}
+  CLOUDNATIVE_PG_TLS: {{ .Values.database.tls | quote }}
 {{ end }}
