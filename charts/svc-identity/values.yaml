@@ -62,10 +62,10 @@ metrics:
 
 redis:
   host: "localhost"
-  port: 6379
+  port: "6379"
   username: ""
   password: ""
-  database: 0
+  database: "0"
   tls: false
 
 database:
