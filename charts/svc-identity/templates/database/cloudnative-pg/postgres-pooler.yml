@@ -5,7 +5,6 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Pooler
 metadata:
   name: myapp-postgres-pooler
-  namespace: yc-infra
 spec:
   cluster:
     name: myapp-postgres

@@ -5,7 +5,6 @@ apiVersion: postgresql.cnpg.io/v1
 kind: ScheduledBackup
 metadata:
   name: myapp-postgres-daily-backup
-  namespace: yc-infra
 spec:
   # Schedule in cron format - Daily at midnight Quebec time (5 AM UTC)
   schedule: "0 5 * * *"
