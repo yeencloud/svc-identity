@@ -60,7 +60,7 @@ metrics:
   enabled: false
   provider: "none"
 
-events:
+redis:
   host: "localhost"
   port: 6379
   username: ""
