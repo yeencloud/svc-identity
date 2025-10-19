@@ -26,6 +26,10 @@ spec:
                 name: {{ .Chart.Name }}-metrics
             - configMapRef:
                 name: {{ .Chart.Name }}-redis
+            {{- if eq .Values.database.provider "cloudnative-pg" }}
+            - configMapRef:
+                name: {{ .Chart.Name }}-cloudnative-pg
+            {{- end }}
     {{- with .Values.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}
