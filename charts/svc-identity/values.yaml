@@ -69,7 +69,14 @@ redis:
   tls: "false"
 
 database:
-  enabled: false
+  provider: "postgres"
+  postgres:
+    address: "localhost"
+    port: "5432"
+    username: "postgres"
+    password: "postgres"
+    database: "postgres"
+    tls: "false"
 
 httpServer:
   enabled: true

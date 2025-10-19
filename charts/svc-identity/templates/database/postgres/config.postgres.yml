@@ -1,0 +1,13 @@
+{{ if .Values.database.provider == "postgres" }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Chart.Name }}-postgres
+data:
+  PG_ADDRESS: {{ .Values.database.postgres.address | quote }}
+  PG_PORT: {{ .Values.database.postgres.port | quote }}
+  PG_USERNAME: {{ .Values.database.postgres.username | quote }}
+  PG_PASSWORD: {{ .Values.database.postgres.password | quote }}
+  PG_DATABASE: {{ .Values.database.postgres.database | quote }}
+  PG_TLS: {{ .Values.database.postgres.tls | quote }}
+{{ end }}
