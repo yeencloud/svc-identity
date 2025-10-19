@@ -4,10 +4,10 @@ kind: ConfigMap
 metadata:
   name: {{ .Chart.Name }}-cloudnative-pg
 data:
-  CLOUDNATIVE_PG_ADDRESS: {{ .Values.database.address | quote }}
-  CLOUDNATIVE_PG_PORT: {{ .Values.database.port | quote }}
-  CLOUDNATIVE_PG_USERNAME: {{ .Values.database.username | quote }}
-  CLOUDNATIVE_PG_PASSWORD: {{ .Values.database.password | quote }}
-  CLOUDNATIVE_PG_DATABASE: {{ .Values.database.database | quote }}
-  CLOUDNATIVE_PG_TLS: {{ .Values.database.tls | quote }}
+  PG_ADDRESS: {{ .Values.database.address | quote }}
+  PG_PORT: {{ .Values.database.port | quote }}
+  PG_USERNAME: {{ .Values.database.username | quote }}
+  PG_PASSWORD: {{ .Values.database.password | quote }}
+  PG_DATABASE: {{ .Values.database.database | quote }}
+  PG_TLS: {{ .Values.database.tls | quote }}
 {{ end }}
