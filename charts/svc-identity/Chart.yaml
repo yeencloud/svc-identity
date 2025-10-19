@@ -1,5 +1,5 @@
 apiVersion: v2
-name: svc-gateway
-description: Gateway for YeenCloud
+name: svc-identity
+description: Identity service for YeenCloud
 type: application
 version: 0.0.1

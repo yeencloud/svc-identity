@@ -1,7 +1,7 @@
-nameOverride: svc-gateway
+nameOverride: svc-identity
 
 image: 
-  repository: ghcr.io/yeencloud/svc-gateway
+  repository: ghcr.io/yeencloud/svc-identity
   tag: latest
   pullPolicy: IfNotPresent
 
