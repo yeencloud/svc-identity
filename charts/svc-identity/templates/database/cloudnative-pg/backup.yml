@@ -4,7 +4,7 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: ScheduledBackup
 metadata:
-  name: myapp-postgres-daily-backup
+  name: {{ .Chart.Name }}-daily-backup
 spec:
   # Schedule in cron format - Daily at midnight Quebec time (5 AM UTC)
   schedule: "0 5 * * *"
@@ -20,7 +20,7 @@ spec:
   
   # Target cluster
   cluster:
-    name: myapp-postgres 
+    name: {{ .Chart.Name }}-cnpg 
   
   # Backup method
   method: barmanObjectStore

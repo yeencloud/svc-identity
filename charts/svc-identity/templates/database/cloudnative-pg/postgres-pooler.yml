@@ -4,10 +4,10 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: Pooler
 metadata:
-  name: myapp-postgres-pooler
+  name: {{ .Chart.Name }}-pooler
 spec:
   cluster:
-    name: myapp-postgres
+    name: {{ .Chart.Name }}-cnpg
   
   # Number of pooler instances
   instances: 2
@@ -32,7 +32,7 @@ spec:
   template:
     metadata:
       labels:
-        app: myapp-postgres-pooler
+        app: {{ .Chart.Name }}-pooler
     spec:
       # Run on storage nodes with PostgreSQL for low latency
       affinity:
