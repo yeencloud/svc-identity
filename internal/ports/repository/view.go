@@ -6,8 +6,6 @@ import (
 	"github.com/yeencloud/svc-identity/internal/domain"
 )
 
-type ViewOriginRepository interface {
-	AddViewOrigin(ctx context.Context, origin domain.ViewOrigin) error
-	ListViewOrigins(ctx context.Context) ([]domain.ViewOrigin, error)
-	CountViewOrigin(ctx context.Context) (int64, error)
+type UserRepository interface {
+	AddUser(ctx context.Context, user domain.User) error
 }

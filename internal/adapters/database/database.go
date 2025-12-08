@@ -23,5 +23,5 @@ func NewDatabase(ctx context.Context, gorm *gorm.DB) (*Database, error) {
 }
 
 func (r Database) registerModels(ctx context.Context) error {
-	return r.Gorm.WithContext(ctx).AutoMigrate(&ViewOrigin{})
+	return r.Gorm.WithContext(ctx).AutoMigrate(&UserModel{})
 }

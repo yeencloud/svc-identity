@@ -6,6 +6,6 @@ import (
 )
 
 type Ports struct {
-	ViewOriginRepo database.ViewOriginRepository
+	ViewOriginRepo database.UserRepository
 	EventPublisher events.Publisher
 }

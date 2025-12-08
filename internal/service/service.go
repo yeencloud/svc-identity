@@ -10,11 +10,9 @@ type service struct {
 	ports *ports.Ports
 }
 
-func NewUsecases(viewRepository database.ViewOriginRepository, eventPublisher events.Publisher) service {
+func NewUsecases(userRepository database.UserRepository, eventPublisher events.Publisher) service {
 	return service{
 		ports: &ports.Ports{
-			ViewOriginRepo: viewRepository,
-
 			EventPublisher: eventPublisher,
 		},
 	}

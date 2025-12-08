@@ -2,40 +2,20 @@ package main
 
 import (
 	"context"
-	"fmt"
-	"net"
 
-	log "github.com/sirupsen/logrus"
 	baseservice "github.com/yeencloud/lib-base"
+	rpc2 "github.com/yeencloud/lib-rpc"
+	rpcConfig "github.com/yeencloud/lib-rpc/domain/config"
+	sharedConfig "github.com/yeencloud/lib-shared/config"
 	contract "github.com/yeencloud/svc-identity/contract/proto"
 	"github.com/yeencloud/svc-identity/internal/adapters/database"
 	"github.com/yeencloud/svc-identity/internal/adapters/http"
+	"github.com/yeencloud/svc-identity/internal/adapters/rpc"
 	"github.com/yeencloud/svc-identity/internal/service"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/reflection"
 )
 
-type server struct {
-	contract.IdentityServiceServer
-}
-
-func (s *server) Register(_ context.Context, in *contract.RegisterObject) (*contract.RegisterResponse, error) {
-	println("CALLED")
-	return &contract.RegisterResponse{Id: in.Mail}, nil
-}
-
-func unaryInterceptor(ctx context.Context, req any, _ *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (any, error) {
-
-	m, err := handler(ctx, req)
-	if err != nil {
-		logger := log.Error
-		logger("RPC failed with error: %v", err)
-	}
-	return m, err
-}
-
 func main() {
-	baseservice.Run("base-service", baseservice.Options{
+	baseservice.Run("identity", baseservice.Options{
 		UseDatabase: true,
 		UseEvents:   true,
 	}, func(ctx context.Context, svc *baseservice.BaseService) error {
@@ -59,25 +39,19 @@ func main() {
 			return err
 		}
 
-		grpcPort := 6042
-		lis, err := net.Listen("tcp", fmt.Sprintf(":%d", grpcPort))
+		rpcCfg, err := sharedConfig.FetchConfig[rpcConfig.Config]()
 		if err != nil {
 			return err
 		}
 
-		s := grpc.NewServer(grpc.UnaryInterceptor(unaryInterceptor))
+		usecases := service.NewUsecases(database.NewUserRepo(), mqPublisher)
 
-		reflection.Register(s)
-		contract.RegisterIdentityServiceServer(s, &server{})
-		go func() {
-			log.Info("Start service")
-			if err := s.Serve(lis); err != nil {
-				log.Fatalln(err)
-			}
-		}()
-
-		usecases := service.NewUsecases(database.NewViewOriginRepo(), mqPublisher)
 		http.NewHTTPServer(httpServer, usecases, db.Gorm)
+
+		rpcServer := rpc2.NewRPCServer(rpcCfg)
+		rpcResponder := rpc.NewRPCServer(usecases)
+		contract.RegisterIdentityServiceServer(rpcServer.RpcServer, rpcResponder)
+		rpcServer.Start(ctx)
 
 		return nil
 	})

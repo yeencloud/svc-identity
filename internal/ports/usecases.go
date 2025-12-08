@@ -3,9 +3,9 @@ package ports
 import (
 	"context"
 
-	"github.com/yeencloud/svc-identity/internal/domain"
+	contract "github.com/yeencloud/svc-identity/contract/proto"
 )
 
 type Usecases interface {
-	Viewed(ctx context.Context, origin domain.ViewOrigin) ([]domain.ViewOrigin, error)
+	Register(_ context.Context, in *contract.RegisterObject) (*contract.RegisterResponse, error)
 }
