@@ -165,8 +165,8 @@ github.com/yeencloud/lib-events v0.1.11 h1:URTYF8Yg/2hcYUyNs4+BhUnwg/wxc5nMQ7ZP5
 github.com/yeencloud/lib-events v0.1.11/go.mod h1:hkXl+RKMjEVHeWqisKdvm2xLGrSKMQRLVFB1h6kE4lg=
 github.com/yeencloud/lib-httpserver v0.2.11 h1:HeGMnh+cC2JZk/LtaEvhqTxSGEz81wzsaavNKr68LMU=
 github.com/yeencloud/lib-httpserver v0.2.11/go.mod h1:KzYqjqCd1dHQTDb1M5AOSwsp7crdLJ8EoZH1LvVaDCg=
-github.com/yeencloud/lib-rpc v0.0.5 h1:5qUlS+ykBy+x74Q5PUN8joapAF/73i7uk4oM8fPduEU=
-github.com/yeencloud/lib-rpc v0.0.5/go.mod h1:Dg1NBbES0vw3gH4cmrDlFyojS2pTHVEMR+o7A1qJELk=
+github.com/yeencloud/lib-rpc v0.0.6 h1:hp8Vh81ITqDrKYesGgptvttPl1K5f/SbpgEZo7u38sU=
+github.com/yeencloud/lib-rpc v0.0.6/go.mod h1:h8AvqIJBNFr4W2RFBde/zxCYTHppf8BEgXw9fe6bJEA=
 github.com/yeencloud/lib-shared v0.2.16 h1:ce2X+9AyTJSZU82NQZ8DixsYraATbJdqhYb9lnmZkQQ=
 github.com/yeencloud/lib-shared v0.2.16/go.mod h1:ldn8cTTKraI+IFHUV8rvaUAKlMbPjrm7YtN9lxAG6Hs=
 github.com/yeencloud/lib-user v0.0.7 h1:yGlZm3chM3TOyCkiv/F6QFPGGp+tQvAzPxXDaAvtnTI=

@@ -3,8 +3,6 @@ module github.com/yeencloud/svc-identity
 go 1.25
 
 require (
-	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc
-	github.com/gin-gonic/gin v1.11.0
 	github.com/google/uuid v1.6.0
 	github.com/mailgun/errors v0.4.0
 	github.com/samber/lo v1.52.0
@@ -36,6 +34,7 @@ require (
 	github.com/gin-contrib/cors v1.7.6 // indirect
 	github.com/gin-contrib/sessions v1.0.4 // indirect
 	github.com/gin-contrib/sse v1.1.0 // indirect
+	github.com/gin-gonic/gin v1.11.0 // indirect
 	github.com/go-errors/errors v1.5.1 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
