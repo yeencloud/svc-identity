@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/yeencloud/svc-identity/contract/proto;identityService";
+
+import "register.proto";
+import "lookup.proto";
+import "auth.proto";
+
+service IdentityService {
+  rpc Register(RegisterObject) returns (RegisterResponse);
+
+  rpc LookupUserIDByUsername(IDLookupRequest) returns (IDLookupResponse);
+  rpc LookupUserIDByEmail(IDLookupRequest) returns (IDLookupResponse);
+  rpc LookupUserProfileByID(ProfileLookupRequest) returns (ProfileLookupResponse);
+
+  rpc Authenticate(AuthRequest) returns (AuthResponse);
+}

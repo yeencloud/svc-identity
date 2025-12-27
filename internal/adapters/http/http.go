@@ -24,8 +24,6 @@ func NewHTTPServer(server *httpserver.HttpServer, usecases ports.Usecases, trx t
 		trx:      trx,
 	}
 
-	httpServer.registerRoutes(server.Gin)
-
 	return httpServer
 }
 

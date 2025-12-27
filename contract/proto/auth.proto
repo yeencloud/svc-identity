@@ -1,12 +1,11 @@
 syntax = "proto3";
 option go_package = "github.com/yeencloud/svc-identity/contract/proto;identityService";
 
-message RegisterObject {
-  string email = 1;
-  string username = 2;
-  string password = 10;
+message AuthRequest {
+  string id = 1;
+  string password = 2;
 }
 
-message RegisterResponse {
+message AuthResponse {
   string id = 1;
 }
