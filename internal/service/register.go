@@ -4,7 +4,6 @@ import (
 	"context"
 	"time"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/google/uuid"
 	contract "github.com/yeencloud/svc-identity/contract/proto/generated"
 	"github.com/yeencloud/svc-identity/internal/domain"
@@ -32,7 +31,6 @@ func (s service) Register(ctx context.Context, in domain.CreateUserParams) (*con
 
 		err = s.models.user.AddUser(dbctx, newUser, string(fromPassword))
 		if err != nil {
-			spew.Dump(err)
 			return nil, err
 		}
 
